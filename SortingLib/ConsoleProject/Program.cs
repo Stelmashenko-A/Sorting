@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using SortingLib;
+using SortingLib.Testing;
 
 namespace ConsoleProject
 {
@@ -8,17 +9,13 @@ namespace ConsoleProject
     {
         static void Main()
         {
-            var list = new List<int>();
-            var rand = new Random();
-            for (var i = 0; i < 20; i++)
-            {
-                list.Add(rand.Next(-100,100));
-                Console.Write(list[i]+" ");
-            }
-            Console.WriteLine();
-            ISorter<int> sorter = new HeapSorter<int>();
-            sorter.Sort(list, new ComarableSortComparer<int>());
-            list.ForEach(x=>Console.Write(x+" "));
+
+            List<ISorter<int> >list=new List<ISorter<int>>();
+            //list.Add(new BubleSorter<int>());
+            list.Add(new HeapSorter<int>());
+            list.Add(new ShellSorter<int>());
+            SortTester<int> tester=new SortTester<int>(list,1000000,new ComarableSortComparer<int>(),new IntRandom(),20);
+            var res=tester.Test();
             Console.Read();
         }
     }
