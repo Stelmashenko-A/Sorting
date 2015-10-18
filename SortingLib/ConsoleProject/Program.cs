@@ -16,7 +16,7 @@ namespace ConsoleProject
                 Console.Write(list[i]+" ");
             }
             Console.WriteLine();
-            ISorter<int> sorter = new ShellSorter<int>();
+            ISorter<int> sorter = new HeapSorter<int>();
             sorter.Sort(list, new ComarableSortComparer<int>());
             list.ForEach(x=>Console.Write(x+" "));
             Console.Read();

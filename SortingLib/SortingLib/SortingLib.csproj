@@ -20,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -43,6 +44,7 @@
     <Compile Include="BubleSorter.cs" />
     <Compile Include="ComarableSortComparer.cs" />
     <Compile Include="DefaultSwap.cs" />
+    <Compile Include="HeapSorter.cs" />
     <Compile Include="ISortComparer.cs" />
     <Compile Include="ISorter.cs" />
     <Compile Include="ISwap.cs" />
