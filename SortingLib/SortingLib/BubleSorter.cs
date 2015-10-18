@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace SortingLib
 {
-    internal class BubleSorter<T> : ISorter<T>
+    public class BubleSorter<T> : ISorter<T>
     {
         public void Sort(IList<T> list, ISortComparer<T> comparer)
         {
