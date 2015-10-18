@@ -4,6 +4,6 @@ namespace SortingLib
 {
     public interface ISorter<T>
     {
-        void Sort(IList<T> list);
+        void Sort(IList<T> list, ISortComparer<T> comparer);
     }
 }
